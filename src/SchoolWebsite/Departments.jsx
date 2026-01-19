@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import { useState } from "react";
-import BussinessPic from "../assets/business.jpg";
+import BussinessPic from "../assets/Business.jpg";
 import MathPic from "../assets/Maths.jpg";
 
 // 1. Data Array - This keeps your UI logic separate from your content
