@@ -26,7 +26,7 @@ function NavBar() {
 					>
 						<li>
 							<a onClick={() => navigate("/Admissions")} className="hover:text-primary" href="">
-								 Admission
+								 Admissions
 							</a>
 						</li>
 
