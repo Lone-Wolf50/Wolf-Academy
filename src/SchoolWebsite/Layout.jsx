@@ -19,7 +19,7 @@ import PersonalInfo2 from "./PersonalInfo2.jsx";
 import PersonalInfo3 from "./PersonalInfo3.jsx";
 import Intro from "./Intro.jsx";
 import Intro2 from "./Intro2.jsx";
-import Intro3 from "./intro3.jsx";
+import Intro3 from "./Intro3.jsx";
 import Intro4 from "./Intro4.jsx";
 import Intro5 from "./Intro5.jsx";
 import Intro6 from "./intro6.jsx";
