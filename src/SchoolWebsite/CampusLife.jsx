@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+
 
 function CampusLife() {
 	const navigate = useNavigate();
-	const [isPlaying, setIsPlaying] = useState(false);
+
 
 	return (
 		<>
@@ -42,65 +42,57 @@ function CampusLife() {
 								src="https://lh3.googleusercontent.com/aida-public/AB6AXuDziE3gLIAc9jdglQ0cZ74JVJkwkt4uYkUkinA7mnQgkJG_TcNRFRerPozUIQ1sxGlhzD2cX2XbHxoi54PzGzib2bgFRgph0oP-IljEGx3KFh7JJrlTYbZk1zgHoHb-BNPoph_ePSYxbjV2fD6sAa_B7hvpIT4fz-UQaTcM9LY5oDtELGXOJ5x1Ifhub5ASc7TW4_cbZ2tTraivbwGbaNpLj6PNA-mniBICpsFWeKbpMHx3iVAGLyE-5GPnk-pFKLf7OwubkiOSw1s"
 							/>
 							<div className="absolute inset-0 inner-vignette pointer-events-none"></div>
-							{isPlaying && (
-								<div className="absolute inset-0 flex flex-col justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-									<div className="flex justify-end">
-										<div className="glass-btn px-3 py-1 rounded-full text-[10px] font-medium tracking-widest uppercase text-white/80">
-											4K Live
-										</div>
-									</div>
-									<div className="glass-overlay rounded-xl p-4 flex items-center justify-between">
-										<div className="flex items-center gap-6">
-											<button
-												onClick={() => setIsPlaying(false)}
-												className="text-white/90 hover:text-white transition-colors"
-											>
-												<span className="material-symbols-outlined text-2xl">
-													pause
-												</span>
-											</button>
-											<button className="text-white/90 hover:text-white transition-colors">
-												<span className="material-symbols-outlined text-2xl">
-													volume_up
-												</span>
-											</button>
-											<div className="hidden sm:block text-[10px] font-medium tracking-tighter text-white/60">
-												02:45 / 05:00
+							 
+								<>
+									<div className="absolute inset-0 flex flex-col justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+										<div className="flex justify-end">
+											<div className="glass-btn px-3 py-1 rounded-full text-[10px] font-medium tracking-widest uppercase text-white/80">
+												4K Live
 											</div>
 										</div>
-										\
-										<div className="flex-1 mx-6 h-[2px] bg-white/10 rounded-full relative">
-											<div className="absolute top-0 left-0 h-full w-1/2 bg-primary"></div>
+										<div className="glass-overlay rounded-xl p-4 flex items-center justify-between">
+											<div className="flex items-center gap-6">
+												<button
+													
+													className="text-white/90 hover:text-white transition-colors"
+												>
+													<span className="material-symbols-outlined text-2xl">
+														pause
+													</span>
+												</button>
+												<button className="text-white/90 hover:text-white transition-colors">
+													<span className="material-symbols-outlined text-2xl">
+														volume_up
+													</span>
+												</button>
+												<div className="hidden sm:block text-[10px] font-medium tracking-tighter text-white/60">
+													02:45 / 05:00
+												</div>
+											</div>
+											
+											<div className="flex-1 mx-6 h-[2px] bg-white/10 rounded-full relative">
+												<div className="absolute top-0 left-0 h-full w-1/2 bg-primary"></div>
+											</div>
+											<button className="text-white/90 hover:text-white transition-colors">
+												<span className="material-symbols-outlined text-2xl">
+													fullscreen
+												</span>
+											</button>
 										</div>
-										<button className="text-white/90 hover:text-white transition-colors">
-											<span className="material-symbols-outlined text-2xl">
-												fullscreen
+									</div>
+								
+									<div
+										
+										className="absolute inset-0 flex items-center justify-center cursor-pointer z-10"
+									>
+										<div className="w-16 h-16 rounded-full glass-btn flex items-center justify-center border-white/20">
+											<span className="material-symbols-outlined text-white text-3xl ml-1">
+												play_arrow
 											</span>
-										</button>
+										</div>
 									</div>
-								</div>
-							)}
-							{!isPlaying && (
-								<div
-									onClick={() => setIsPlaying(true)}
-									className="absolute inset-0 flex items-center justify-center cursor-pointer z-10"
-								>
-									<div className="w-16 h-16 rounded-full glass-btn flex items-center justify-center border-white/20">
-										<span className="material-symbols-outlined text-white text-3xl ml-1">
-											play_arrow
-										</span>
-									</div>
-								</div>
-							)}
-							{isPlaying && (
-								<video
-									src="/wolf.mp4"
-									autoPlay
-									controls
-									onEnded={() => setIsPlaying(false)}
-									className="absolute inset-0 w-full h-full object-contain rounded-xl bg-black"
-								/>
-							)}
+								</>
+							
 						</div>
 						<div className="mt-8 text-center">
 							<h2 className="text-3xl font-light mb-3 tracking-tight text-white/90">
