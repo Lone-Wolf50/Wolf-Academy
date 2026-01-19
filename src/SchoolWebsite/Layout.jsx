@@ -22,7 +22,7 @@ import Intro2 from "./Intro2.jsx";
 import Intro3 from "./Intro3.jsx";
 import Intro4 from "./Intro4.jsx";
 import Intro5 from "./Intro5.jsx";
-import Intro6 from "./intro6.jsx";
+import Intro6 from "./Intro6.jsx";
 import Intro7 from "./Intro7.jsx";
 import Intro8 from "./Intro8.jsx";
 import IntroDashBoard from "./IntroDashBoard.jsx";
