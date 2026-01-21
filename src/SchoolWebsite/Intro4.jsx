@@ -9,7 +9,7 @@ function Intro4() {
 
 	const handleNext = () => {
 		previousSchool && gpa
-			? Swal.fire({
+			? window.Swal.fire({
 					title: "Do you want to save the changes?",
 					showDenyButton: true,
 					showCancelButton: true,
@@ -19,13 +19,13 @@ function Intro4() {
 					denyButtonText: `Don't save`,
 				}).then((result) => {
 					if (result.isConfirmed) {
-						Swal.fire("Saved!", "", "success");
+						window.Swal.fire("Saved!", "", "success");
 						navigate("/Document-Registration");
 					} else if (result.isDenied) {
-						Swal.fire("Changes are not saved", "", "info");
+						window.Swal.fire("Changes are not saved", "", "info");
 					}
 				})
-			: Swal.fire({
+			: window.Swal.fire({
 					icon: "warning",
 					iconColor: "#fb2424",
 					title: "Incomplete Form",
@@ -40,7 +40,7 @@ function Intro4() {
 
 	const validateSchool = () => {
 		if (previousSchool.length < 10) {
-			Swal.fire({
+			window.Swal.fire({
 				icon: "warning",
 				iconColor: "#fb2424",
 				title: "Incomplete Form",
@@ -126,7 +126,7 @@ function Intro4() {
 									if (value >= 1.0 && value <= 4.0) {
 										setGpa(value);
 									} else {
-										Swal.fire({
+										window.Swal.fire({
 											icon: "warning",
 											iconColor: "#fb2424",
 											title: "Incomplete Form",

@@ -9,7 +9,7 @@ function Intro2({ fullName, setFullName }) {
 
 	const handleNext = () => {
 		fullName && dob && email
-			? Swal.fire({
+			? window.Swal.fire({
 					title: "Do you want to save the changes?",
 					showDenyButton: true,
 					background: "#101922",
@@ -19,13 +19,13 @@ function Intro2({ fullName, setFullName }) {
 					denyButtonText: `Don't save`,
 				}).then((result) => {
 					if (result.isConfirmed) {
-						Swal.fire("Saved!", "", "success");
+						window.Swal.fire("Saved!", "", "success");
 						navigate("/Academic-Registration");
 					} else if (result.isDenied) {
-						Swal.fire("Changes are not saved", "", "info");
+						window.Swal.fire("Changes are not saved", "", "info");
 					}
 				})
-			: Swal.fire({
+			: window.Swal.fire({
 					icon: "warning",
 					iconColor: "#fb2424",
 					title: "Incomplete Form",
@@ -110,7 +110,7 @@ function Intro2({ fullName, setFullName }) {
 								if (value.includes("@gmail.com")) {
 									setEmail(value);
 								} else {
-									Swal.fire({
+									window.Swal.fire({
 										icon: "warning",
 										iconColor: "#fb2424",
 										title: "Invalid Email",

@@ -9,14 +9,14 @@ function Intro6() {
 
 	const HandleClick = () => {
 		birthCertificate && reportCard && medicalRecords
-			? Swal.fire({
+			? window.Swal.fire({
 					position: "center",
 					icon: "success",
 					title: "Your work has been saved",
 					showConfirmButton: false,
 					timer: 1500,
 				}).then(() => navigate("/Registration-completed"))
-			: Swal.fire({
+			: window.Swal.fire({
 					icon: "warning",
 					iconColor: "#fb2424",
 					title: "Incomplete Form",
