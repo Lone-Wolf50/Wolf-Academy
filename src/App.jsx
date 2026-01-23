@@ -7,7 +7,7 @@ function App() {
     <>
   
     
-  <Demo />
+  <Layout />
     </>
   );
 }
